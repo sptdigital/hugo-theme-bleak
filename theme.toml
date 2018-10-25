@@ -1,8 +1,8 @@
-name = "edyo"
+name = "bleak"
 license = "MIT"
-licenselink = "https://github.com/edyo/hugo-theme-edyo/blob/master/LICENSE.md"
-description = "Based in Bleak theme"
-homepage = "http://www.entredevyops.es/"
+licenselink = "https://github.com/edyo/hugo-theme-bleak/blob/master/LICENSE.md"
+description = "SPT variation of the bleak theme"
+homepage = "http://www.spt.co.uk/"
 tags = ["ghost", "minimal"]
 features = ["", ""]
 min_version = 0.15

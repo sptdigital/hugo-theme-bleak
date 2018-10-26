@@ -10,11 +10,20 @@
 			<a href="{{ .Permalink }}"><img src="{{ .Site.BaseURL }}/images/{{ .Params.image }}" alt="" /></a>
 		</figure>
 		{{ end }}
+		<!--
 		<span class="post-meta">
-			<span class="post-date">{{ .Date.Format "2 Jan 2006" }}</span>
+			<span class="post-date">{{ .Date.Format "Monday 2nd January 2006" }}</span>
 		</span>
+		-->
 		<h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+		<!--
 		<p class="post-excerpt">{{ .Summary }}</p>
+		-->
 		<span class="post-more"><a href="{{ .Permalink }}">Read more <i class="fa fa-angle-right"></i></a></span>
+		<ul class="pages">
+		  {{ range .Data.Pages }}
+		  <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+		  {{ end }}
+		</ul>
 	</div>
 </article>

@@ -18,19 +18,15 @@
 
 		<main class="content" role="main">
 
+			<h3 class="sections-title">Sections</h3>
+	
 			<div class="post-list">
 				<div id="push">
-
-            {{ $paginator := .Paginate (where .Site.Pages "Section" "in" .Site.Params.mainSections) }}
-
-			{{ range $index, $page := $paginator.Pages }}
-			  {{ .Render "li" }}
-			{{ end }}
-
+					{{ range .Site.Sections }}
+					  {{ .Render "section-block" }}
+					{{ end }}
 				</div>
 			</div>
-
-			{{ partial "pagination.html" (dict "paginator" $paginator "site" .Site ) }}
 
 		</main>
 

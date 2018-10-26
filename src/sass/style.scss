@@ -20,13 +20,81 @@ $color-gray-40: #595B66;
 $color-gray-25: #363740;
 $color-gray-15: #1F2026;
 
+$color-spt-orange-1: #f89828;
+$color-spt-orange-2: #f68b1f;
+$color-spt-orange-3: #ff7900;
+$color-spt-orange-4: #f3702a;
+
+$color-spt-dark-gray-1: #717074;
+$color-spt-dark-gray-2: #58595b;
+$color-spt-dark-gray-3: #4d4f53;
+$color-spt-dark-gray-4: #515a63;
+
+$color-spt-light-gray-1: #b8b7b9;
+$color-spt-light-gray-2: #a7a9ac;
+$color-spt-light-gray-3: #a6a7a9;
+$color-spt-light-gray-4: #929aa6;
+
+$color-spt-orange: $color-spt-orange-3;
+$color-spt-dark-gray: $color-spt-dark-gray-3;
+$color-spt-light-gray: $color-spt-light-gray-3;
+
 /*
   Change the accent colors here. Make sure they work on light an dark
   backgrounds or as background color for light and dark text color
 */
 
-$color-primary-default: $color-blue; /* Light */
-$color-primary-active:  $color-blue-dark; /* Dark */
+$color-primary-default: $color-spt-orange-1; /* Light */
+$color-primary-active:  $color-spt-orange-3; /* Dark */
+
+
+@font-face {
+    font-family: Klavika;
+    src: url("../fonts/KlavikaLight-Plain.eot");
+    src: url("../fonts/KlavikaLight-Plain.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/KlavikaLight-Plain.woff2") format("woff2"),
+         url("../fonts/KlavikaLight-Plain.woff") format("woff"),
+         url("../fonts/KlavikaLight-Plain.ttf") format("truetype"),
+         url("../fonts/KlavikaLight-Plain.svg#KlavikaLight-Plain") format("svg");
+    font-weight: 100;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Klavika;
+    src: url("../fonts/KlavikaRegular-Plain.eot");
+    src: url("../fonts/KlavikaRegular-Plain.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/KlavikaRegular-Plain.woff2") format("woff2"),
+         url("../fonts/KlavikaRegular-Plain.woff") format("woff"),
+         url("../fonts/KlavikaRegular-Plain.ttf") format("truetype"),
+         url("../fonts/KlavikaRegular-Plain.svg#KlavikaRegular-Plain") format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Klavika;
+    src: url("../fonts/Klavika-Medium.eot");
+    src: url("../fonts/Klavika-Medium.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/Klavika-Medium.woff2") format("woff2"),
+         url("../fonts/Klavika-Medium.woff") format("woff"),
+         url("../fonts/Klavika-Medium.ttf") format("truetype"),
+         url("../fonts/Klavika-Medium.svg#Klavika-Medium") format("svg");
+    font-weight: 500;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Klavika;
+    src: url("../fonts/KlavikaBold-Plain.eot");
+    src: url("../fonts/KlavikaBold-Plain.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/KlavikaBold-Plain.woff2") format("woff2"),
+         url("../fonts/KlavikaBold-Plain.woff") format("woff"),
+         url("../fonts/KlavikaBold-Plain.ttf") format("truetype"),
+         url("../fonts/KlavikaBold-Plain.svg#KlavikaBold-Plain") format("svg");
+    font-weight: 700;
+    font-style: normal
+}
 
 
 /* ==========================================================================
@@ -93,6 +161,14 @@ h3 {
   font-size: 1.5em;
   line-height: 1.334em;
   margin: 2em 0 -0.667em;
+}
+
+h3.sections-title {
+    font: 500 2rem/2.5rem 'Klavika', sans-serif;
+    margin-top: 0;
+    color: $color-spt-light-gray-2;
+    margin-left: 0.5rem;
+    padding-bottom: 2rem;
 }
 
 h4 {
@@ -415,7 +491,7 @@ body {
   width: 100%;
   min-height: 100vh;
   padding-bottom: 6em;
-  background: $color-gray-97;
+  background: $color-spt-dark-gray;
 }
 
 .menu-initial {
@@ -560,7 +636,7 @@ body {
       max-width: none;
       height: 2em;
       margin: 0;
-      border-radius: 5px;
+      border-radius: 0;
     }
 
     .name {
@@ -947,7 +1023,7 @@ body {
   }
 
   .header-name {
-    font-family: Aldrich, sans-serif;
+    font-family: Klavika, sans-serif;
     font-weight: 700;
     font-size: 2.2em;
     font-variant: small-caps;
@@ -955,7 +1031,7 @@ body {
     display: block;
     line-height: 1em;
     text-decoration: none;
-    color: $color-gray-15;
+    color: $color-spt-orange-2;
     padding: 0;
     margin: 0;
 
@@ -990,7 +1066,7 @@ body {
   .header-description {
     display: block;
     margin: 1em auto 0;
-    color: $color-gray-65;
+    color: $color-spt-light-gray;
     position: relative;
     font-weight: 300;
 
@@ -1219,6 +1295,8 @@ body {
     line-height: 1.334em;
     font-weight: 400;
     margin-bottom: 1.334em;
+    font-family: 'Klavika', sans-serif;
+    color: $color-spt-light-gray-2;
 
     a {
       color: inherit;
@@ -1235,12 +1313,10 @@ body {
 
   .post-title {
     position: relative;
-    color: #000;
-    font-size: 2em;
-    line-height: 1.375em;
-    font-weight: 800;
+    color: $color-spt-light-gray-1;
     text-indent: -1px;
     margin: 0.25em 0 0.75em;
+    font: 700 2rem/1.375rem Klavika,sans-serif;
 
     &:before {
       content: '';
@@ -1262,6 +1338,29 @@ body {
   .post-header {
     padding: 4em 0 0;
     margin-bottom: 3em;
+  }
+
+  ul.pages {
+    background: $color-spt-dark-gray-2;
+    color: $color-spt-light-gray;
+    text-align: center;
+    padding-left: 0;
+    list-style-type: none;
+    
+    li {
+      padding: 0.5rem 0;
+    }
+
+  }
+
+  .post-content {
+    background-color: white;
+    padding: 1.5rem;
+
+    h1:first-of-type, h2:first-of-type, h3:first-of-type, h4:first-of-type, h5:first-of-type, h6:first-of-type {
+      margin-top: 0;
+    }
+
   }
 }
 
@@ -1505,6 +1604,8 @@ body {
     .post-title {
       font-size: 1.5em;
       line-height: 1.167em;
+      font: 700 1.5rem/1.75rem Klavika,sans-serif;
+      color: $color-spt-dark-gray-2;
     }
 
     .post-excerpt {
@@ -2030,7 +2131,7 @@ body {
     margin: -75px 0 0 -75px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: $color-blue;
+    border-top-color: $color-spt-orange-1;
     -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
     animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
 }
@@ -2044,7 +2145,7 @@ body {
     bottom: 5px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: $color-blue-dark;
+    border-top-color: $color-spt-orange-3;
     -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
       animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
 }
@@ -2058,7 +2159,7 @@ body {
     bottom: 15px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: $color-gray-85;
+    border-top-color: $color-spt-light-gray;
     -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
       animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
 }

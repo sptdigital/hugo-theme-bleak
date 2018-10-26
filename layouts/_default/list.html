@@ -21,7 +21,7 @@
 			{{ $paginator := .Paginator }}
 
 			{{ range $index, $page := .Paginator.Pages }}
-			  {{ .Render "li" }}
+			  {{ .Render "section-block" }}
 			{{ end }}
 
 				</div>
